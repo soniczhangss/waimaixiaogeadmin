@@ -1,0 +1,72 @@
+<div class="panel panel-default">
+	<div class="panel-heading">餐厅图片</div>
+	<div class="panel-body text-center">
+		<label class="btn btn-primary btn-file pull-left">
+			上传图片 <input class="btn btn-default" id="inputImage" type="file" accept="image/*" image="restaurantImg" resize-max-height="1280" resize-max-width="800" resize-quality="0.7" resize-type="image/jpg" ng-image-compress style="display: none;"/>
+		</label>
+		<img ng-if="!restaurantImg" ng-src="{{restaurant.imageSrc}}" />
+		<img ng-if="restaurantImg" ng-src="{{restaurantImg.compressed.dataURL}}" />
+	</div>
+</div>
+
+<div class="input-group">
+	<span class="input-group-addon" id="restaurant-address">餐厅名称</span>
+	<input type="text" class="form-control" ng-model="restaurant.name" aria-describedby="restaurant-name">
+</div>
+
+<br>
+
+<div class="input-group">
+	<span class="input-group-addon" id="restaurant-description">餐厅描述</span>
+	<input type="text" class="form-control" ng-model="restaurant.description" aria-describedby="restaurant-description">
+</div>
+
+<br>
+
+<div class="input-group">
+	<span class="input-group-addon" id="restaurant-address">地址</span>
+	<input type="text" class="form-control" ng-model="restaurant.address" aria-describedby="restaurant-address">
+</div>
+
+<br>
+
+<div class="input-group">
+	<span class="input-group-addon" id="restaurant-contactNum">联系电话</span>
+	<input type="text" class="form-control" ng-model="restaurant.contactNum" aria-describedby="restaurant-contactNum">
+</div>
+
+<br>
+
+<div class="input-group">
+	<span class="input-group-addon" id="restaurant-contactNum">特色菜系</span>
+	<input type="text" class="form-control" ng-model="restaurant.style" aria-describedby="restaurant-style">
+</div>
+
+<br>
+
+<div class="panel panel-default">
+	<div class="panel-heading">餐厅菜单<button type="button" class="btn btn-xs btn-success pull-right" ng-click="newMenuItem()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>添加菜品</button></div>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>图片</th>
+				<th>名称</th>
+				<th>类别</th>
+				<th>价格</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="dish in restaurant.menuItems" ng-click="open(dish)">
+				<td>
+					<img ng-src="{{ dish.dishThumbnail }}" alt="Dish Thumbnail" class="img-rounded" width="256" height="256">
+				</td>
+				<td>{{ dish.name }}</td>
+				<td>{{ dish.category }}</td>
+				<td>{{ dish.price | currency : AU$ }}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<button class="btn btn-danger pull-left" type="button" ng-click="delete()">删除</button>
+<button class="btn btn-success" type="button" ng-click="save()">保存</button>

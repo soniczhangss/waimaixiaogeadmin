@@ -1,0 +1,22 @@
+{
+  "name": "waimaixiaogeadmin",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "xulong zhang"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-image-compress": "^0.1.3",
+    "angular-breadcrumb": "^0.4.1"
+  }
+}

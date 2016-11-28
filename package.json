@@ -1,0 +1,39 @@
+{
+  "name": "waimaixiaogeadmin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-animate": "^1.5.8",
+    "angular-cookies": "^1.5.8",
+    "angular-touch": "^1.5.8",
+    "angular-ui-bootstrap": "^2.0.0",
+    "angular-ui-router": "^0.3.1",
+    "angular-uuid": "0.0.2",
+    "aws-sdk": "^2.4.11",
+    "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.8",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat-css": "^2.3.0"
+  },
+  "scripts": {
+    "test": "node_modules/jasmine/bin/jasmine.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soniczhangss/fxmenuadmin.git"
+  },
+  "author": "xulong zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soniczhangss/fxmenuadmin/issues"
+  },
+  "homepage": "https://github.com/soniczhangss/fxmenuadmin#readme"
+}
